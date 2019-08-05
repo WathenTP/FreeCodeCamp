@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./SurveyForm.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Are you a Citizen of the Empire?</h1>
+    
+    <form id="survey-form">
+        <p id="description">
+            This survey is a simple combination of questions to determine your loyalty to the Emperor.
+          </p>
+      <div id="shadow-box" class="input-box-shadow">
+      <div class="input-box">
+        <div class="label-box">
+          <label for="name" id="name-label">Name</label>
+        </div>
+        <input
+          id="name"
+          type="name"
+          placeholder="Enter your name"
+          required
+          autofocus
+          class="input-field"
+        />
+      </div>
+
+      <div class="input-box">
+        <div class="label-box">
+          <label for="email" id="email-label">Email</label>
+        </div>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email"
+          required
+          class="input-field"
+        />
+      </div>
+
+      <div class="input-box">
+        <div class="label-box">
+          <label for="age" id="number-label">Age</label>
+        </div>
+        <input
+          id="number"
+          type="number"
+          min="1"
+          max="10000"
+          placeholder="Age"
+          required
+          class="input-field"
+        />
+      </div>
+
+      <div class="input-box">
+        <div class="label-box">
+          <label for="occupation" id="occupation-label">Occupation</label>
+        </div>
+        <select id="dropdown" name="occupation" class="dropdown">
+          <option disabled value="Select an occupation"
+            >Select your assigned role</option
+          >
+          <option value="Student">Farmer</option>
+          <option value="Full time work">Engineer</option>
+          <option value="Part time work">Stormtrooper</option>
+          <option value="Prefer not to say">Prefer not to say (rebel)</option>
+          <option value="Other">Other (rebel)</option>
+        </select>
+      </div>
+    </div>
+      <div class="input-box-shadow">
+        <div class="label-box">
+          <label for="userRating"
+            >How likely is it you would betray the Empire to the Rebel scum?
+        </div>
+        <ul>
+          <li class="radio">
+            <label
+              ><input
+                name="radio-buttons"
+                value="1"
+                type="radio"
+                class="userRatings"
+              />Never</label
+            >
+          </li>
+          <li class="radio">
+            <label
+              ><input
+                name="radio-buttons"
+                value="1"
+                type="radio"
+                class="userRatings"
+              />Not ever</label
+            >
+          </li>
+          <li class="radio">
+            <label
+              ><input
+                name="radio-buttons"
+                value="1"
+                type="radio"
+                class="userRatings"
+              />Not under any condition</label
+            >
+          </li>
+          <li class="radio">
+              <label
+                ><input
+                  name="radio-buttons"
+                  value="1"
+                  type="radio"
+                  class="userRatings"
+                />I am a Rebel (scum)</label
+              >
+            </li>
+        </ul>
+      </div>
+    
+      <div class="input-box-shadow">
+        <div class="label-box">
+          <label for="userRating">Things that the Empire could improve</label>
+        </div>
+        <ul>
+          <li class="checkbox">
+            <label
+              ><input
+                name="preference"
+                value="1"
+                type="checkbox"
+                onclick="return false"
+                class="userRatings"
+              />Food shortages</label
+            >
+          </li>
+          <li class="checkbox">
+            <label
+              ><input
+                name="preference"
+                value="2"
+                type="checkbox"
+                onclick="return false"
+                class="userRatings"
+              />Trade routes</label
+            >
+          </li>
+          <li class="checkbox">
+            <label
+              ><input
+                name="preference"
+                value="3"
+                type="checkbox"
+                onclick="return false"
+                class="userRatings"
+              />Reduce aggressive treamtent of alien species</label
+            >
+          </li>
+          <li class="checkbox">
+              <label
+                ><input
+                  name="preference"
+                  value="4"
+                  type="checkbox"
+                  class="userRatings"
+                />Nothing, the Empire is perfect</label
+              >
+            </li>
+        </ul>
+      </div>
+      <div class="input-box">
+        <div class="label-box">
+          <label for="userRating">Anything other comments?</label>
+        </div>
+        <div class="label-box">
+          <textarea
+            id="comments"
+            class="input-field"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+      </div>
+
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>

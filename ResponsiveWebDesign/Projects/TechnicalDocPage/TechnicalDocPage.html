@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+    />
+    <link rel="stylesheet" href="./TechnicalDocPage.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Flex Box</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">introduction</a></li>
+        <li>
+          <a class="nav-link" href="#positioning_boxes">positioning boxes</a>
+        </li>
+        <li><a class="nav-link" href="#justify_content">justify content</a></li>
+        <li><a class="nav-link" href="#align_items">align items</a></li>
+        <li class="bottom-border">
+          <a class="nav-link" href="#flex_wrap">flex wrap</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header><h1>introduction</h1></header>
+        <p>
+          A website user interface (UI) has two components. First there are
+          visual elements e.g. colours, font and images. Second there is the
+          placement or positioning of those elements. In responsive web design,
+          a UI layout must accommodate many different browsers and devices
+          accessing content.
+        </p>
+        <br />
+        <p>
+          CSS3 introduced flexible boxes, or flexbox, to create page layouts for
+          a dynamic UI. It arranges elements in a predictable way for different
+          screen sizes. The syntax for which is:
+        </p>
+        <ul>
+          <li><code>display:flex</code></li>
+        </ul>
+      </section>
+      <section class="main-section" id="positioning_boxes">
+        <header><h1>positioning boxes</h1></header>
+        <p>
+          The CSS property display: flex; when placed on an element allows you
+          to use other flex properties to build a responsive page.
+        </p>
+        <br />
+        <p>
+          By adding display: flex; to an element turns it into a flex container.
+          This makes it possible to align any children of that element into row
+          or column. This is done by adding the flex-direction property to the
+          parent item and setting it to row or column. With the former aligning
+          align children horizontally and the latter will align vertically.
+          Other options are row-reverse and column-reverse. The default setting
+          for this is always row.
+        </p>
+        <ul>
+          <li><code>flex-direction: row</code></li>
+          <li><code>flex-direction: column</code></li>
+        </ul>
+      </section>
+      <section class="main-section" id="justify_content">
+        <header><h1>justify content</h1></header>
+        <p>
+          Sometimes flex items within a flex container do not fill all the space
+          in the container. Often, we want to tell CSS how to align and space
+          out the flex items in a certain way. This can be done with
+          justify-content: which has several options.
+        </p>
+        <br />
+        <p>
+          One of the most common options is justify-content: centre; which
+          aligns all the flex items to the centre inside the flex container.
+          Other options include:
+        </p>
+
+        <ul>
+          <li>
+            <code>justify-content: flex-start;</code>
+            <p>
+              Aligns items to the start of the flex container. For a row this
+              pushes them to the left and for column this pushes to the top.
+            </p>
+          </li>
+          <li>
+            <code>justify-content: flex-end;</code>
+            <p>
+              Aligns items to the end of the flex container. For a row this
+              pushes them to the right and for a column this pushes them to the
+              bottom.
+            </p>
+          </li>
+          <li>
+            <code>justify-content: space-between;</code>
+            <p>
+              Align items to the centre of the main axis, with extra space
+              placed between items. The first and last times are pushed to the
+              very edge of the container. For a row the first item is against eh
+              left side and the last item is agains the right and the other
+              items are spaced evenly.
+            </p>
+          </li>
+          <li>
+            <code>justify-content: space-around;</code>
+            <p>
+              Similar to space-between but the first and last items are not
+              locked to the edges of the container, instead space is distributed
+              around all the items.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="align_items">
+        <header><h1>align items</h1></header>
+        <p>
+          The align-items property is similar to justify-content when aligning
+          content with the latter items are aligned along the main axis; for
+          rows, this is a horizontal line and for columns this is a vertical
+          line.
+        </p>
+        <br />
+        <p>
+          CSS offers align-items property to align flex items along the cross
+          axis. For a row it tells CSS how to put the items in the entire row up
+          or down with a container and for a column it tells it how to push all
+          items left or right within the container.
+        </p>
+
+        <ul>
+          <li>
+            <code>align-items: flex-start;</code>
+            <p>
+              Aligns to the start of the flex container, for rows this is to the
+              top and for columns this is to the left.
+            </p>
+          </li>
+          <li>
+            <code>align-items: flex-end;</code>
+            <p>
+              Aligns items to the end of the flex container. For rows this is to
+              the bottom of the container and for columns this is to the right.
+            </p>
+          </li>
+          <li>
+            <code>align-items: center;</code>
+            <p>
+              Align items to the center. For rows this vertically aligns items
+              with equal space above and below and for columns it aligns
+              horizontal with equal space to the left and the right.
+            </p>
+          </li>
+          <li>
+            <code>align-items: stretch;</code>
+            <p>
+              Stretch items to fill the container. For example rows are
+              stretched to fill the flex container top-to-bottom.
+            </p>
+          </li>
+          <li>
+            <code>align-items: baseline;</code>
+            <p>
+              Align items to their baseline, this is a text concept, think of it
+              as the line that letter sit on.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="flex_wrap">
+        <header><h1>flex wrap</h1></header>
+        <p>
+          By default a flex container will fit all flex items together. For
+          example a row will all be on one line. However, using the flex-wrap
+          property tells CSS to wrap items.
+        </p>
+        <br />
+        <p>
+          This means extra items move into a new row / column. The break point
+          of where the wrapping happens depends on the size of the items and the
+          size of the container. CSS also has directions for the wrap.
+        </p>
+        <ul>
+          <li>
+            <code>flex-wrap: no-wrap;</code>
+            <p>Default setting and doesn't wrap</p>
+          </li>
+          <li>
+            <code>flex-wrap: wrap;</code>
+            <p>
+              Wraps items from left-to-right if in a row or top-to-bottom if
+              they are In a column
+            </p>
+          </li>
+          <li>
+            <code>flex-wrap: wrap-reverse;</code>
+            <p>
+              Wraps items from bottom-to-top in a row or right-to-left if in a
+              column.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
