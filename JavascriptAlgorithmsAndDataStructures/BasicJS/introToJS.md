@@ -1102,3 +1102,76 @@ if value is empty (“ “), delete the given prop property from the album.
 
       return collection;
     }
+
+**Redesigned code by Josh**
+
+    // Setup
+    var collection = {
+        "2548": {
+          "album": "Slippery When Wet",
+          "artist": "Bon Jovi",
+          "tracks": [
+            "Let It Rock",
+            "You Give Love a Bad Name"
+          ]
+        },
+        "2468": {
+          "album": "1999",
+          "artist": "Prince",
+          "tracks": [
+            "1999",
+            "Little Red Corvette"
+          ]
+        },
+        "1245": {
+          "artist": "Robert Palmer",
+          "tracks": [ ]
+        },
+        "5439": {
+          "album": "ABBA Gold"
+        }
+    };
+    // Keep a copy of the collection for tests
+    var collectionCopy = JSON.parse(JSON.stringify(collection));
+
+    // Only change code below this line
+    function updateRecords(id, prop, value) {
+      var clone = Object.assign({}, collection)
+      var album = clone[id]
+      var currentProp = album[prop]
+
+      if (prop === "tracks" && value !== "") {
+        if (currentProp) {
+          clone[id][prop].push(value);
+        } else {
+          clone[id][prop] = [value];
+        }
+      } else if (value !== "") {
+        clone[id][prop] = value;
+      } else {
+        delete clone[id][prop];
+      }
+
+      var endValue = prop === 'tracks' ? [...album.tracks, value]
+
+      var start = [1, 2, 3]
+      var clone = [...start]
+      clone[1] = value
+      // clone
+      // [1, value, 3]
+
+
+      // [...tracks, value]
+      // [track1, track2, value]
+
+      return {
+        ...clone,
+        [id]: {
+          ...album,
+          [prop]: endValue
+        }
+      };
+    }
+
+    // Alter values below to test your code
+    updateRecords(5439, "artist", "ABBA");
