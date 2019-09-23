@@ -8,7 +8,7 @@ In CS data is everything that is meaningful to a computer. JS provides seven dif
 
 Numbers are defined as 1, 2, 3 etc and strings are a collection of characters “12”, “dog” and “123 cats”. Computers can performs mathematical function on the former but not the latter.
 
-Declaring JS Variables
+## Declaring JS Variables
 
 Variables, allow computers to store and manipulate data in a dynamic fashion. They do this by using a “label” to point to data, rather than using the data itself. Any of the seven data sets Amy be stored as a variable.
 
@@ -20,7 +20,7 @@ JS is told to declare a variable by putting the key word var infant of it e.g.
 
 Creates a variable called ourName, in JS statements end with a semicolon. Variable names can be made up of numbers, letters and \$ or \_ but may not contain spaces or start with a number.
 
-Storing Values with the Assignment Operator
+## Storing Values with the Assignment Operator
 
 A value can be stored against a variable with the assignment operator; =, assignment always goes from right to left. Everything right of the = operator is resolved before etc value is assigned to the variable to the left of the operator.
 
@@ -36,17 +36,17 @@ var myVar = 0;
 
 Creates a variable called myVar and assigns it an initial value of 0.
 
-Understanding uninitialised variables
+## Understanding uninitialised variables
 
 When JS variables are declared they have an initial value of undefined, any mathematical operation on an undefined variable will result NaN (not a number). If you concatenate a string with an undefined variable you will get a literal string “undefined”.
 
-Understanding Case Sensitivity in Variables
+## Understanding Case Sensitivity in Variables
 
 In JS all variables and functions are case sensitive. For example MYVAR is the not the same as MyVar. It is therefore possible to have multiple distinct variables with the same name but different casing (however, for the sake of clarity do not do this).
 
 Best practice: Write variables camelCase
 
-Arithmetic with JS
+## Arithmetic with JS
 
 Number is a data type in JS which represents numeric data. To add two numbers together use the + operator, to subtract use -, to multiple use \*, to divide use /.
 
@@ -66,13 +66,13 @@ If this is used prefix, ++i, then it increments and returns the value after incr
 
 Decrementing or decreasing a variable by one with the - -, operator.
 
-Creating decimal numbers with JS
+## Creating decimal numbers with JS
 
 Decimal numbers are referred to as floating point numbers or floats. Floats are speedy and highly efficient, which gives them an advantage. They can deal with enormous numbers and small numbers without needing lots of space.
 
 Floating point numbers have some issues with asccuracy due to the lack of recursion in computing, this video explains it nicely https://www.youtube.com/watch?v=PZRI1IfStY0.
 
-Finding a remainder in JS
+## Finding a remainder in JS
 
 The remainder operator % gives the remainder of the division of 2 numbers. For examples:
 
@@ -86,7 +86,7 @@ This is because
 
 This is particularly useful to check if a number is odd or even, with odd numbers having a remainder and even numbers having no remainder.
 
-Compound Assignment with Augmented Addition
+## Compound Assignment with Augmented Addition
 
 Because everything to the right of the = operator is evaluated first it is often common practice to use operators which fo both a mathematical operation and assignment in one step, one such example is the += operator.
 
@@ -98,7 +98,7 @@ For Example:
 
 Likewise augmented subtraction can be done with -= operator. multiplication with the \*= operator, division with /=
 
-Declaring String Variables
+## Declaring String Variables
 
     var myName = “your name”;
 
@@ -116,7 +116,7 @@ This signals to JS that the quote is not the end of the string and instead shoul
 
 It is also important to note that the backslash and forward slash should not be confused.
 
-Escape Sequences in Strings
+## Escape Sequences in Strings
 
 Quotes are not the only characters that can be escaped inside a string. There are two reasons for seeing exacting characters.
 Allows the use of a character you might not otherwise be able to type out e.g. backspace
@@ -131,7 +131,7 @@ Allow you to represent multiple quotes in a string without JS misinterpreting wh
     \b = backspace
     \f = formfeed
 
-Concatenating strings with the + operator
+## Concatenating strings with the + operator
 
 When the + operator is used with a string value it is called the concatenation operator. You can build new strings out of other strings by concatenating them together. Important to note that concatenation does not add sauces between concatenated strings so you’ll need to add them yourself.
 
@@ -143,7 +143,7 @@ Using the += operator to concatenate a string onto the end of an existing string
     var myStr = “This is the first sentence. “;
     myStr += “This is the second sentence.” ;
 
-Constructing Strings with Variables
+## Constructing Strings with Variables
 
 Sometimes you will need to build a string, Mad Libs style. By using the concatenation operator you can insert one or more variable into a string you’re building.
 
@@ -151,7 +151,7 @@ Sometimes you will need to build a string, Mad Libs style. By using the concaten
     var myStr = “My name is “ + myName + “ and I am well!”;
     My name is Thom and I am well!
 
-Appending Variable to strings
+## Appending Variable to strings
 
 Just as we can build a string over multiple lines out of the string literals, we can also append variables to a string using the += operator.
 
@@ -160,7 +160,7 @@ Just as we can build a string over multiple lines out of the string literals, we
     myStr += someAdjective;
     Learning to code is Awesome!
 
-Find the length of a string
+## Find the length of a string
 
 This can be done by adding .length after the string variable or string literal.
 “Alan Peter”.length; // 10
@@ -171,9 +171,9 @@ We can also assign this to the variable itself
     firstName.length;
     7
 
-Bracket notation
+## Bracket notation
 
-To find the first character in a string
+## To find the first character in a string
 
 Bracket notation is a way to get a character at a specific index within a string. Modern programming languages start counting at 0 and not 1. This is referred to as zero based indexing.
 
@@ -181,7 +181,7 @@ Bracket notation is a way to get a character at a specific index within a string
     firstName[0]
     C
 
-String Immutability
+## String Immutability
 
 in JS string values are immutable, which means they cannot be altered once they have been created.
 
@@ -194,7 +194,7 @@ var firstName = “Ada”;
 var secondLetterOfFirstName = firstName[1];
 d
 
-To find the last character in a string
+## To find the last character in a string
 
 In order to get the last letter of a string, yo ucan subtract one from the string’s length. For example
 
@@ -202,7 +202,7 @@ In order to get the last letter of a string, yo ucan subtract one from the strin
     firstName[firstName.length - 1]
     s
 
-To find the Nth-to-last character in a string
+## To find the Nth-to-last character in a string
 
 The same principle is applied as seen above, for example if i wanted the 3rd to last letter.
 
@@ -210,31 +210,31 @@ The same principle is applied as seen above, for example if i wanted the 3rd to 
     firstName[firstName.length - 3]
     l
 
-Putting it all together!
+## Putting it all together!
 
     function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
-    	var result = “The “ + myAdjective + “ “ + myNoun + “ “ + 				myVerb + “ “ + 	myAdverb + “.”;
+    	var result = “The “ + myAdjective + “ “ + myNoun + “ “ + myVerb + “ “ + myAdverb + “.”;
     	return result;
     }
 
     wordBlanks(“dog”, “big”, “ran”, quickly”);
     The big dog ran quickly.
 
-JS arrays
+## JS arrays
 
-Store multiple values in one variable using
+## Store multiple values in one variable using
 
 With JS array variable, we can store several pieces of data in one place. An array declaration is started with an open square bracket and closed with the closing square bracket, each entry should have a comma between them:
 
     var sandwich = [“peanut butter”, “jelly”, “bread”];
 
-Nesting one array inside another
+## Nesting one array inside another
 
 Arrays can also be nested with other arrays, this is also known as multidimensional arrays
 
     var multidimensional = [[“Thom”, 26], [“Linda”, 27]];
 
-Accessing Array data with Indexes
+## Accessing Array data with Indexes
 
 Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character they are specifying an entry in the array. Like strings, arrays use zero-based indexing i.e. the first element is 0.
 
@@ -242,14 +242,14 @@ Array indexes are written in the same bracket notation that strings use, except 
     array[0]; // equals 50
     var data = array[1] // equals 60
 
-Modifying Array data with indexes
+## Modifying Array data with indexes
 
 Unlike strings the entries in arrays are mutable and can be changed freely
 
     var ourArray = [50,40,30];
     ourArray[0] = 15; // results in [15,40,30]
 
-Access multi-dimensional arrays with indexes
+## Access multi-dimensional arrays with indexes
 
 One way to think of multi-dimensional arrays is as an array of arrays. When you use brackets to access your array, the first set of brackets refers to the entries in the outer-most (the first level) array and each additional pair of brackets refers to he next level of entries inside.
 
@@ -264,9 +264,9 @@ One way to think of multi-dimensional arrays is as an array of arrays. When you 
     arr[3][0]; // equals [10, 11, 12]
     arr[3][0][1]; // equals 11
 
-Manipulating arrays
+## Manipulating arrays
 
-.push( )
+### .push( )
 
 As easy way to append data to the end of an array is via the push( ) function. This takes one or more parameters and “pushes” them onto the end of the array.
 
@@ -274,7 +274,7 @@ As easy way to append data to the end of an array is via the push( ) function. T
     arr.push(4);
     // arr is now [1, 2, 3, 4]
 
-.shift( )
+### .shift( )
 
 Popping removes the last item and shift removes the first item.
 
@@ -283,7 +283,7 @@ Popping removes the last item and shift removes the first item.
     console.log(oneDown); // Returns 1
     console.log(threeArr); // Returns [4, 6]
 
-.pop( )
+### .pop( )
 
 This is used to “pop” a value off of the end of the an array. The popped off variable can be stored by assigning it to a variable. In other words .pop( ) removes the last element of an array and returns that element. Any entry can be popped off; numbers, strings, nested arrays etc.
 
@@ -292,18 +292,18 @@ This is used to “pop” a value off of the end of the an array. The popped off
     console.log(oneDown); // Returns 6
     console.log(threeArr); // Returns [1, 4]
 
-.unshift( )
+### .unshift( )
 
 Shift allows you to remove the first item, unshift allows you to add an item to the start of the array. It works like push but rather adding to the end you are adding to the beginning.
 var arr = [2, 3, 4];
 arr.unshift(1);
 // arr is now [1, 2, 3, 4]
 
-Shopping list
+## Shopping list
 
 var myShoppingList = [[“Chicken, 1], [“Potato”, 6], [“Carrots”, 4]];
 
-Write reusable JS with Functions
+## Write reusable JS with Functions
 
 In JS, we can divide up our code into reusable parts called functions. Here is an example:
 
@@ -322,7 +322,7 @@ Each time the function is called it will print the message, “Hello World”, o
     reusableFunction( )
     Hi World
 
-Passing Values to Functions with Arguments
+## Passing Values to Functions with Arguments
 
 Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or “passed”) into a function when it is called are known as arguments.
 
@@ -336,7 +336,7 @@ Parameters are variables that act as placeholders for the values that are to be 
 
 Because we have passed two arguments “Hello” and “World”, Inside the function, param1 will = “Hello” and param2 = “World”. Note testFun can be called again with different arguments and the parameters would take on the value of the new arguments.
 
-Global Scope and Functions
+## Global Scope and Functions
 
 In JS, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they ca nee seen everywhere in your JS code.
 
@@ -356,7 +356,7 @@ Variables which hare used without the var keyword are automatically created in t
     	console.log(output);
     }
 
-Local scope and functions
+## Local scope and functions
 
 Variable which are declared within a function, as well as the function parameters have local scope. That means, they are only visible within that function.
 
@@ -367,7 +367,7 @@ Variable which are declared within a function, as well as the function parameter
     myTest( ); // logs “foo”
     console.log(loc); loc is not defined outside of the function and so cannot be identified
 
-Global vs. Local Scope in Functions
+## Global vs. Local Scope in Functions
 
 It is possible to have both local and globe variables with the same name. When you do this, the local variables takes precedence over the global variable.
 
@@ -379,7 +379,7 @@ It is possible to have both local and globe variables with the same name. When y
 
 The function “myFun” will return “Head” because the local version of the variable is present.
 
-Return a value from a function with Return
+## Return a value from a function with Return
 
 We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
 
@@ -390,7 +390,7 @@ We can pass values into a function with arguments. You can use a return statemen
 
 plusThree takes an argument for num and returns a value equal to num + 3.
 
-Understanding Undefined Value from a returned from a function
+## Understanding Undefined Value from a returned function
 
 A function can include the return statement but it does not have to. In the case that the function doesn’t have a return statement, when you call it, the function processes the inner code but the return value is undefined.
 
@@ -404,7 +404,7 @@ A function can include the return statement but it does not have to. In the case
 
 In the above exampled, addSum, is a function without a return statement. The function will change the global sum variable but the returned value of the function is undefined.
 
-Assignment with a returned value
+## Assignment with a returned value
 
 Everything to the right of the assignment operator (=) is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variable.
 
@@ -430,11 +430,11 @@ the nextInLine function should then return the element that was removed.
     var testArr = [1,2,3,4,5];
     console.log(nextInLine(testArr, 6)); // Returns [2,3,4,5,6]
 
-Understanding Boolean value
+## Understanding Boolean value
 
 Booleans may only be one of two values, true or false. They are treated as on-off switches, where true is on and false if off. These two states are mutually exclusive. It is important to note that boolean values are never written in quotes.
 
-Use conditional logic with if statements
+## Use conditional logic with if statements
 
 If statements are used to make decisions in code. The keyword if tells JS to executer the code in the curly brackets under certain conditions, defined in the parentheses. These conditions are known as Boolean conditions and they may only be true or false.
 
@@ -452,7 +452,7 @@ When the conditions evaluates to true, the program executes the statement inside
 
 When test is called with a value of true, the if statement evaluates myCondition to see if it is true or not. Since it is the true the function returns “It was true”. When we call test with a value of false, myCondition is not true and thus the other value is called.
 
-Comparison with the Equality operator
+## Comparison with the Equality operator
 
 There are many comparison operators in a JS. All of these operators return boolean true or false values.
 
@@ -474,7 +474,7 @@ In order for JS to compare two different data types e.g. numbers and strings, it
     1 == “1” // true
     “3” == 3 // true
 
-Comparison with the strict equality operator
+## Comparison with the strict equality operator
 
 Strict equality, ===, is the counterpart to the equality operator. However, unlike the equality operator, which attempt to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
 
@@ -488,7 +488,7 @@ In JS, you can determine the type of a variable or a value with the typeof opera
     typeof 3 // returns “number”
     typeof “3” // retunes “string”
 
-Comparisons with the Inequality operator
+## Comparisons with the Inequality operator
 
 The inequality operator != is the opposite of the equality operator. It means “Not Equal” and returns false where equality would return true and vice versa. Like the equality operator, it can and willl convert data types of values while comparing:
 
@@ -498,7 +498,7 @@ The inequality operator != is the opposite of the equality operator. It means �
     1 != true // false
     0 != false // false
 
-Comparisons with the strict Inequality operator
+## Comparisons with the strict Inequality operator
 
 The strict inequality operator !== is the logical opposite of the strict equality operator. It means “Strictly not equal” and returns false where strict equality would return true and vice versa. It will not convert data types.
 
@@ -506,7 +506,7 @@ The strict inequality operator !== is the logical opposite of the strict equalit
     3 !== ‘3’ // true
     4 !== 3 // false
 
-Comparisons with the Greater than operator
+## Comparisons with the Greater than operator
 
 The greater than operator > compares the values of two numbers. If the number on the left is greater than the number to the right it returns true otherwise it returns false. Like the equality operator it too will convert data types while comparing
 
@@ -515,7 +515,7 @@ The greater than operator > compares the values of two numbers. If the number on
     2 > 3 // false
     ‘1’ > 9 // false
 
-Comparisons with the Greater than or Equal to operator
+## Comparisons with the Greater than or Equal to operator
 
 The greater than or equal to operator >= compares the values of 2 numbers. If the number to the left is greater than or equal to the number on the right then it returns true, otherwise it returns false.
 
@@ -524,7 +524,7 @@ The greater than or equal to operator >= compares the values of 2 numbers. If th
     2 >= 3 // false
     ‘7’ >= 9 // false
 
-Comparisons with the Less than operator
+## Comparisons with the Less than operator
 
 The less than operator < compares the values of 2 numbers. If the number to the left is less than the number on the right then it returns true, otherwise it returns false. Like the equality operator it too will convert data types while comparing
 
@@ -534,7 +534,7 @@ The less than operator < compares the values of 2 numbers. If the number to the 
     3 < 2 // false
     ‘8’ < 4 // false
 
-Comparisons with the Less than or Equal to operator
+## Comparisons with the Less than or Equal to operator
 
 The less than or equal to operator <= compares the values of 2 numbers. If the number to the left is less than or equal to the number on the right then it returns true, otherwise it returns false.
 
@@ -544,7 +544,7 @@ The less than or equal to operator <= compares the values of 2 numbers. If the n
     3 <= 2 // false
     ‘8’ <= 4 // false
 
-Comparisons with the Logical And Operator
+## Comparisons with the Logical And Operator
 
 Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are ture.
 
@@ -564,7 +564,7 @@ This will only return yes if the num is greater than 5 and less than 10, the sam
     }
     return “No’;
 
-Comparisons with the Logical Or Operator
+## Comparisons with the Logical Or Operator
 
 The logical or operator | | returns true if either of the operands is true, otherwise it returns false. The operator is composed of two pipe | symbols.
 
@@ -583,7 +583,7 @@ This will return “Yes” if a number is between 5 and 10 the same logic can be
     }
     return “Yes”;
 
-Introducing else statements
+## Introducing else statements
 
 When a condition for an if statement is true, the block of code following it is executed. What about when the condition is false> Normally nothing would happen. With an else statement an alternate block of code can be executed:
 
@@ -593,7 +593,7 @@ When a condition for an if statement is true, the block of code following it is 
     	return “10 or less”;
     }
 
-Introducing Else If Statements
+## Introducing Else If Statements
 
 If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements:
 
@@ -605,7 +605,7 @@ If you have multiple conditions that need to be addressed, you can chain if stat
     	return “Between 5 and 15”;
     }
 
-Logical Order in If Else statements
+## Logical Order in If Else statements
 
 Order is important in if and else if statements. The function is executed from top to bottom so you will want to be careful of what statement comes first. For example:
 
@@ -630,7 +630,7 @@ While these two functions look nearly identical if we pass a number to both we g
 foo(0) // “Less than one”
 bar(0) // “Less than two”
 
-Chaining If Else statements
+## Chaining If Else statements
 
 if/else statements can be chained together for complex logic. Here is pseudocode of multiple chained if/else statements:
 
@@ -672,7 +672,7 @@ Your function will be passed par and strokes arguments. Return the correct strin
     		return “Go Home!”
     	}
 
-Selecting from many Options with switch elements
+## Selecting from many Options with switch elements
 
 If you have many options to choose from, use the switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered. Here is a pseudocode example:
 
@@ -690,20 +690,21 @@ If you have many options to choose from, use the switch statement. A switch stat
     }
 
 Case values are tested with strict equality = = = . The break tells JS to stop executing statements. If the break is emitted, the next statement will be executed. In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain. A default statement should be the last case:
-switch(num) {
-case value1:
-statement1;
-break;
-case value2:
-statement2;
-break;
-. . .
-default:
-defaultStatement;
-break;
-}
 
-Multiple Identical Option in Switch Statements
+    switch(num) {
+        case value1:
+        statement1;
+        break;
+        case value2:
+        statement2;
+        break;
+        . . .
+        default:
+        defaultStatement;
+        break;
+    }
+
+## Multiple Identical Option in Switch Statements
 
 If the break statement is omitted from a switch statement’s case, the following case statement(s) are executed until a break is encountered. IF you have multiple inputs with the same output, you can represent them in a switch statement like this:
 
@@ -718,7 +719,7 @@ If the break statement is omitted from a switch statement’s case, the followin
 
 This means that cases for 1,2 and 3 will produce the same result.
 
-Replacing If Else chains with Switch
+## Replacing If Else chains with Switch
 
 If you have many options to choose from, a switch statement can be easier to write than many chained if/else if statements. For example:
 
@@ -731,18 +732,19 @@ If you have many options to choose from, a switch statement can be easier to wri
     }
 
 can be replaced with:
-switch(val) {
-case 1:
-answer = “a”;
-break;
-case 2:
-answer = “b”;
-break;
-default:
-answer = “c”;
-}
 
-Returning Boolean Values from Functions
+    switch(val) {
+        case 1:
+        answer = “a”;
+        break;
+        case 2:
+        answer = “b”;
+        break;
+        default:
+        answer = “c”;
+    }
+
+## Returning Boolean Values from Functions
 
 You may recall from Comparison with the equality operator that all comparison operators return a boolean true or false value. Sometimes people use an if/else statement to do a comparison, like this:
 
@@ -760,7 +762,7 @@ But there is a better way to do this. Since = = = returns true or false, we can 
     	return a === b;
     }
 
-Return Early pattern for functions
+## Return Early pattern for functions
 
 When a return statement is reached, the execution of the current function stops and control returns to the calling location:
 
@@ -773,7 +775,7 @@ When a return statement is reached, the execution of the current function stops 
 
 The above outputs “Hello” to the console, returns “World, but “byebye” is never output, because the function exits at the return statement.
 
-Counting cards Task
+## Counting cards Task
 
 You will write a card counting function. It will receive a card parameter, which can be a number or a string and increment or decrement the global count variable according to the card’s value (see table). The function will then return a string with the current count and the string Bet if the count is positive or Hold if the count is 0 or negative. The current count and the player’s decision (Bet or Hold) should be separated by a single space.
 
@@ -797,21 +799,22 @@ You will write a card counting function. It will receive a card parameter, which
     	return count + “ Hold”;
     }
 
-A note on regex
+## A note on regex https://regexr.com/
 
 The RegExp constructor creates a regular expression object for matching text with a pattern. See favourites for more info.
 
-Build JavaScript Objects
+## Build JavaScript Objects
 
 Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in the objects through what are called properties.
 
 Objects are useful for storing data in a structure way and can represent real world objects, like a cat. Here’s a sample cat object:
-var cat = {
-“name”: “Whiskers”,
-“legs”: 4,
-“tails”: 1,
-“enemies”: [“Water”, “Dogs”]
-};
+
+    var cat = {
+        “name”: “Whiskers”,
+        “legs”: 4,
+        “tails”: 1,
+        “enemies”: [“Water”, “Dogs”]
+    };
 
 In this example, all the properties are stored as strings e.g. “name” and “legs”. However, you can also use numbers as properties. You can even omit quotes for single-word string properties, as follows:
 
@@ -823,7 +826,7 @@ In this example, all the properties are stored as strings e.g. “name” and �
 
 However, if your object has any non-string properties, Javascript will automatically typecast them as strings.
 
-Accessing Object Properties with Dot Notation
+## Accessing Object Properties with Dot Notation
 
 There are two ways to acmes the properties of an object: dot notation ( . ) and a bracket notation ( [ ] ), similar to an array.
 
@@ -836,7 +839,7 @@ Dot notation is what you use when you know the name of the property you’re try
     var prop1val = myObj.prop1; // val1
     var prop2val = myObj.prop2; // val2
 
-Accessing Object Properties with Bracket Notation
+## Accessing Object Properties with Bracket Notation
 
 The second way to access the properties of an object is bracket notation. Of the property of the object you are trying to access has a space in its name, you will need to use bracket notation. However,, you can still use bracket notation o object properties without spaces.
 
@@ -853,7 +856,7 @@ Here is a sample of using bracket notation to read an objects property:
 
 Property names with spaces must be in quotes, single or double.
 
-Accessing Object Properties with Variables
+## Accessing Object Properties with Variables
 
 Another use of bracket notation on objects is to access a property which is stored as the value of a variable. This can be very useful for iterating through an objects properties or when accessing a lookup table.
 
@@ -891,7 +894,7 @@ Using playerNumber variable to look up player 16 in testObj using bracket notati
     var playerNumber = 16;
     var player = testObj[playerNumber];
 
-Updating Object properties
+## Updating Object properties
 
 After you’ve created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
 
@@ -911,7 +914,7 @@ Camper is a very happy fog, let’s change his name to “Happy Camber”. This 
 
 Now when we evaluate ourDog.name, instead of “Camper” we will get “Happy Camper”.
 
-Add New properties to a JavaScript Object
+## Add New properties to a JavaScript Object
 
 You can add new properties to existing JavaScript objects the same way yo uwould modify the,.
 
@@ -923,12 +926,12 @@ Here’s how we would add a “bark” property ourDog:
 
 Now when we evaluate ourDog.bark, we’ll get his bark, “bow-wow”.
 
-Delete Properties from a JS Object
+## Delete Properties from a JS Object
 
 We can also delete properties from objects like this:
 delete ourDog.bark;
 
-Using Objects for Lookups
+## Using Objects for Lookups
 
 Objects can be thought of as a key/value storage, like a dictionary. IF you have tabular data, you can use an object to “lookup” value rather than a switch statement of an if/else chain. This is most useful when you know that your data is limited to a certain range. Here is an example of a simple reverse alphabet lookup:
 
@@ -953,22 +956,22 @@ Create an object called lookup. Use it to look up val and assign the associated 
     function phoneticLookup(val) {
       var result = "";
 
-var lookup = {
-"alpha": "Adams",
-"bravo": "Boston",
-"charlie": "Chicago",
-"delta": "Denver",
-"echo": "Easy",
-"foxtrot": "Frank"
-};
-result = lookup[val];
+    var lookup = {
+        "alpha": "Adams",
+        "bravo": "Boston",
+        "charlie": "Chicago",
+        "delta": "Denver",
+        "echo": "Easy",
+        "foxtrot": "Frank"
+        };
+        result = lookup[val];
 
-     return result;
+        return result;
     }
 
     phoneticLookup("delta");
 
-Testing Objects for properties
+## Testing Objects for properties
 
 Sometimes it’s useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty( ) returns true or false if the property is found or not. For example:
 
@@ -979,7 +982,7 @@ Sometimes it’s useful to check if the property of a given object exists or not
     myObj.hasOwnProperty(“top”); / / true
     myObj.hasOWnProperty(“middle”); / / false
 
-Manipulating Complex Objects
+## Manipulating Complex Objects
 
 Sometimes you may want to store data in a flexible Data Structure. A JS object is one way to handle flexible data. They allow for arbitrary combination of strings, numbers, booleans, arrays, functions and objects. Here is an example of a complex data structure:
 
@@ -1003,7 +1006,7 @@ Objects hold data in a property, which has a key-value format. In the example ab
 
 JavaScript Object Notation or JSON is a related data interchange format used to store data.
 
-Accessing Nested Objects
+## Accessing Nested Objects
 
 The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
 
@@ -1024,7 +1027,7 @@ Here is a nested object:
     	ourStorage.cabinet[“top drawer”].folder2; / / “secrets”
     	ourStorage.desk.drawer; / / “stapler”
 
-Accessing Nested Arrays
+## Accessing Nested Arrays
 
 As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.
 
@@ -1131,10 +1134,7 @@ if value is empty (“ “), delete the given prop property from the album.
           "album": "ABBA Gold"
         }
     };
-    // Keep a copy of the collection for tests
-    var collectionCopy = JSON.parse(JSON.stringify(collection));
 
-    // Only change code below this line
     function updateRecords(id, prop, value) {
       var clone = Object.assign({}, collection)
       var album = clone[id]
@@ -1154,24 +1154,94 @@ if value is empty (“ “), delete the given prop property from the album.
 
       var endValue = prop === 'tracks' ? [...album.tracks, value]
 
-      var start = [1, 2, 3]
-      var clone = [...start]
-      clone[1] = value
-      // clone
-      // [1, value, 3]
+    updateRecords(5439, "artist", "ABBA");
 
+## Iterate With JavaScript While Loops
 
-      // [...tracks, value]
-      // [track1, track2, value]
+You can run the same code multople times by using a loop.
 
-      return {
-        ...clone,
-        [id]: {
-          ...album,
-          [prop]: endValue
-        }
-      };
+The first type of loop we will learn is called a "while" loop because it runs "while" a specific condition is true and stops once that condition is no longer true.
+
+    var ourArray = [];
+    var i = 0
+    while (i < 5) {
+        ourArray.push(i);
+        i++;
     }
 
-    // Alter values below to test your code
-    updateRecords(5439, "artist", "ABBA");
+## Iterate with JavaScript For Loops
+
+You can run the same code multiple times by using a loop. The most common type of JS loop is called a "for loop" because it runs "for" a specific number of times.
+
+For loops are declared with three optional expressions separated by semicolons:
+
+    for ([initialization];[condition];[final-expression])
+
+The initialization statement is executed one time only before the loop starts. It is typicsally used to define and setup your loop variable.
+
+The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates true. When condition is false at the start of the iteration, the loop will stop exectuing. This means if the condition starts as false, your loop will never execute.
+
+The final-expression is executed at the end of each loop iteration, prior to the next condition cehck and is usually used to increment or decrement your loop counter.
+
+In the following example we initialise with i = 0 and iterate while our condition is i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final expression.
+
+    var ourArray = [];
+    for (var i = 0; i < 5; i++) {
+        ourArray.push(i);
+    }
+
+    // our array will now contain (0, 1, 2, 3, 4).
+
+## Iterate Odd Numbers With a For Loop
+
+For loops dont have to iterate one at a time. By chsanging our final-expression, we can count by even numbers.
+
+We'll start at i = 0 and loop while i < 10. We'll increment i by 2 each loop with i+=2
+
+    var ourArray = [];
+    for )var i = 0; i < 10; i+=2) {
+        ourArray.push(i);
+    }
+
+    // our array will now contain (0, 2, 4, 6, 8,)
+
+## Count Backwards With a For Loop
+
+A for loop can also count backwards, so long as we can define the right conditions.
+
+In order to count backwards by twos, we'll need to change our initialization, condition and final-expression.
+
+We'll start at i = 10 and loop while i > 0. We'll decrement i by 2 each loop with i -= 2.
+
+    var ourArray = [];
+    for (var i=10; i > 0; i-=2) {
+        ourArray.push(i);
+    }
+
+    // our array will now contain (10, 8, 6, 4, 2)
+
+## Iterate Through an Array with a For Loop
+
+A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a for loop. This code will output each element of the array.
+
+    var arr = [10, 9, 8, 7, 6];
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+Remember arrays have zer-based numbering, which means the last index of the array length is -1. Our condition for this loop is i < arr.length, which stops when i is at length -1.
+
+## Nesting For Loops
+
+If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
+
+        var arr = [
+            [1, 2], [3, 4], [5, 6]
+        ];
+        for (var i=0; i < arr.length; i++) {
+            for (var j=0; j < arr[i].length; j++) {
+                console.log(arr[i][j]);
+            }
+        }
+
+This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the .length of arr[i], since arr[i] is itself an array.
