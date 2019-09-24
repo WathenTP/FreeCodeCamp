@@ -1475,5 +1475,3 @@ This can be re-written with multiple conditional operators:
     function findGreaterOrEqual(a, b) {
         return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
     }
-
-## Introduction to ES6 Challenges
