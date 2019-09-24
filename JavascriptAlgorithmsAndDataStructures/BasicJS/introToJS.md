@@ -1235,7 +1235,7 @@ Remember arrays have zer-based numbering, which means the last index of the arra
 
 If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays. Here is an example:
 
-        var arr = [
+    var arr = [
             [1, 2], [3, 4], [5, 6]
         ];
         for (var i=0; i < arr.length; i++) {
@@ -1245,3 +1245,235 @@ If you have a multi-dimensional array, you can use the same logic as the prior w
         }
 
 This outputs each sub-element in arr one at a time. Note that for the inner loop, we are checking the .length of arr[i], since arr[i] is itself an array.
+
+Challenge
+
+Modify function multiplyAllso that it multiplies the productvariable by each number in the sub-arrays of arr
+
+    function multiplyAll(arr) {
+    var product = 1;
+    for (var i = 0; i < arr.length; i++) {
+        for (var x = 0; x < arr[i].length; x++) {
+        product *= arr[i][x];
+        }
+    }
+    return product;
+    }
+
+    multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+## Iterate with JavaScript Do...While Loops
+
+You can run the same code multiple times by using a loop.
+
+The next type of loop you will learn is called "do...while" loop because it first will "do" one pass of teh code inside the loop no matter what and then it runs "while" a specified condition is true and stops once that condition is no longer true.
+
+    var ourArray = [];
+    var i = 0;
+    do {
+        ourArray.push(i);
+        i++;
+    } while (i < 5);
+
+This behaves just as you would expect with any other type of loop and the resulting array will look like [0, 1, 2, 3, 4]. However, what makes the do...while different from the other loops is how it behaves when the condition fails on the first check.
+
+Here is a regular while loop that will run the code in the loop as long as i < 5.
+
+    var ourArray = [];
+    var i = 5;
+    while (i < 5) {
+        ourArray.push(i);
+        i++;
+    }
+
+Notice that we initialise the value of i to be 5. When we execute the next line, we notice that i is not less thna 5. So we do not execute the code inside the loop. The result is that ourArray will end up with nothing added to it, so it will look like this [] when all the code in the example above finishes running.
+
+Now, take a look ar a do...while loop.
+
+    var ourArray = [];
+    var i = 5;
+    do {
+        ourArray.push(i);
+        i++;
+    } while (i < 5);
+
+In this case, we initialise the value i as 5, just like we did with the while loop. When we get to the next line, there is no check for the value i, so we go to the code inside the curly braces and execute it. We will add one element to the array and increment i before we get to the coniditon check. Then, when we get to checking if i < 5 see that i is now 6, which fails teh conditional check. So we exit the loop and are done. At teh end of the agove example the value of ourArray is [5].
+
+Essentially, a do...while loop ensures that the code inside the loop will run at least once.
+
+Let's try getting a do...while loop to work by pushing values to an array.
+
+Change the while loop in the code to a do...while loop so that the loop will push the number 10 to myArray and i will be equal to 11 when your code finishes running:
+
+    // Setup
+    var myArray = [];
+    var i = 10;
+
+    // Only change code below this line.
+    do {
+        myArray.push(i);
+    i++;
+    } while (i < 5);
+
+## Profile Lookup Challenge!
+
+We have an array of object representing different people in our contacts list.
+
+A lookUpProfile function that takes nam and a property (prop) as arguments has been pre-written for you.
+
+The function should check if name is an actual contact's first name and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If name does not correspond to any contacts then return "No such contact"
+
+if prop does not correspond to any valid properties of a contact found to match name then return "No such property"
+
+    var contacts = [
+        {
+            "firstName": "Akira",
+            "lastName": "Laine",
+            "number": "0543236543",
+            "likes": ["Pizza", "Coding", "Brownie Points"]
+        },
+        {
+            "firstName": "Harry",
+            "lastName": "Potter",
+            "number": "0994372684",
+            "likes": ["Hogwarts", "Magic", "Hagrid"]
+        },
+        {
+            "firstName": "Sherlock",
+            "lastName": "Holmes",
+            "number": "0487345643",
+            "likes": ["Intriguing Cases", "Violin"]
+        },
+        {
+            "firstName": "Kristian",
+            "lastName": "Vos",
+            "number": "unknown",
+            "likes": ["JavaScript", "Gaming", "Foxes"]
+        }
+    ];
+
+
+    function lookUpProfile(name, prop){
+    for (var x = 0; x < contacts.length; x++) {
+        if (contacts[x].firstName === name) {
+            if (contacts[x].hasOwnProperty(prop)) {
+                return contacts[x][prop];
+            } else {
+                return "No such property";
+            }
+        }
+    }
+    return "No such contact";
+    }
+    lookUpProfile("Akira", "likes");
+
+This runs and "Akira" is matched to the "firstName" key in the first object, so the if statement returns true. "likes" is found within the first object, so the second if statement returns true. The value of "likes" is returns - "Pizza, "Coding", "Brownie Points".
+
+The for loop runs, starting at the first object in the contacts list. If the firstName parameter passed into the function matches the value of the "firstName" key in the first object, the if statement passes. Then, we use .hasOwnProperty() method (checks if there’s a given property and returns a boolean) with prop as an argument. If it’s true, the value of prop is returned. If the second if statement fails, No such property is returned. If the first if statement fails, the for loop continues on to the next object in the contacts list. If the firstName parameter isn’t matched by the final contacts object, the for loop exits and No such contact is returned.
+
+## Generate Random Fractions with JavaScript
+
+Random numbers are useful for creating random behaviour. JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and not quite up to 1 (exclusive). Thus Math.random() can return 0 but never quite return 1.
+
+Note
+Like Storing Values with the Equal Operator, all function calls will be resolved before the return executes, so we can return the value of Math.random() function.
+
+    function randomFraction() {
+       return Math.random ();
+    }
+
+## Generate Random Whole Number with JavaScript
+
+It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.
+
+1. use Math.random() to generate a random decimal
+2. Multiply that random decimal by 20
+3. Use another function, Math.floor() to round the number down to its nearest whol number
+
+Remember that Math.random() can never quite return a 1 and because we're rounding own, it's impossible to get 20. This technique will give us a whole number between 0 and 19.
+
+Putting everything together, this is what out code looks like:
+
+    Math.floor(Math.random() * 20);
+
+## Generate Random Whole Numbers within a Range
+
+Instead of generating a random number between zero and a given number like we did before, we can generate a random number that falls within a range of two specific numbers.
+
+To do this, we'll define a minimum number min and a maximum number max.
+
+Here's the formula we'll use. Take a moment to read it and try to understand what this code is doing:
+
+    Math.floor(Math.random() * (max - min + 1)) + min
+
+## Use the parseInt Function
+
+The parseInt() function parses a string and returns an integer. Here's an example:
+
+    var a = parseInt("007");
+
+The above function converts the string "007" into the integer 7. If the first character in the string can't be converted into a number then it returns NaN.
+
+## Use the parseInt Function with a Radix
+
+The parseInt() function pasrses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+
+The function call looks like:
+
+    parseInt(string, radix);
+
+An example:
+
+    var a = parseInt("11", 2);
+
+The radix variable says that "11" is in the binary system, or base 2. This examples converts the string "11" into an integer 3.
+
+## Use the Conditional (Ternary) Operator
+
+The conditional operator, also called the ternary operator, can be used as a one line if-else expression. The syntax is:
+
+    condition ? statement-if-true : statement-if-false;
+
+The following fucntion uses an if-else statement to check a condition:
+
+    function findGreater(a, b) {
+        if(a > b) {
+            return "a is greater";
+        } else {
+            return "b is greater";
+        }
+    }
+
+This can be re-written using the conditional operator:
+
+    function findGreater(a, b) {
+        return a > b ? "a is greater" : "b is greater";
+    }
+
+## Use Multiple Conditional (Ternary) Operators
+
+In the previous challenge, you used a single conditional operator. You can also chain them otgether to check for multiple conditions.
+
+The following function use if, else if and else statements to check multiple conditions:
+
+    function findGreaterOrEqual(a, b) {
+        if (a === b) {
+            return "a and b are equal";
+        } else if (a > b) {
+            return "a is greater";
+        } else {
+            return "b is greater";
+        }
+    }
+
+This can be re-written with multiple conditional operators:
+
+    function findGreaterOrEqual(a, b) {
+        return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
+    }
+
+## Introduction to ES6 Challenges
