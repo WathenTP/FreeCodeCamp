@@ -175,3 +175,12 @@ When there is no function body and only a return value, arrow function syntax al
     const myFunc = () => "value"
 
 This code will still return the value by default.
+
+## Write Arrow Functions with Parameters
+
+Just like normal function, you ca pass arguments into arrow functions.
+
+    // doubles input valuea nd returns it
+    const doubler = (item) => item * 2;
+
+You can pass more than one argument into arrow functions as well.
