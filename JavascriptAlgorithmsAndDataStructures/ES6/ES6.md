@@ -184,3 +184,21 @@ Just like normal function, you ca pass arguments into arrow functions.
     const doubler = (item) => item * 2;
 
 You can pass more than one argument into arrow functions as well.
+
+## ES6: Write Higher Order Arrow Functions
+
+It's time we see how powerful arrow functions are when processing data.
+
+Arrow functions work really well with higher order functions, such as map(), filter() and reduce()., that take other functions as arguments for processing collections of data.
+
+Read the following code:
+
+    FBPosts.filter(function(post) {
+      return post.thumbnail !== null && post.shares > 100 && post.likes > 500;}
+    })
+
+We have written this with filter() to at least make it somewhat readable. Now compare it to the following which uses arrow function syntax:
+
+      FBPosts.filter((post) => post.thumbnail !== null && post.shares > 100 && post.likes > 500)
+
+This code is more succinct and accomplishes the same task with fewer lines of code.
