@@ -108,6 +108,19 @@ a:hover {
   text-align: center;
 }
 
+/* Wrapper */
+.wrapper {
+  width: 800px;
+  max-width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.wrapper h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
 /* Form */
 #email-subscribe {
   display: flex;
