@@ -109,14 +109,14 @@ a:hover {
 }
 
 /* Form */
-#form {
+#email-subscribe {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#form input[type="email"] {
+#email-subscribe input[type="email"] {
   max-width: 275px;
   width: 100%;
   padding: 5px;
