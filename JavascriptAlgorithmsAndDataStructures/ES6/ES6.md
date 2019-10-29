@@ -270,7 +270,7 @@ ES6 introduces the spread operator, which allows us to expand arrays and other e
 
 The ES5 code below uses apply() to compute the maximum value in an array.
 
-    var arr [6, 89, 3, 45];
+    var arr = [6, 89, 3, 45];
     var maximum = Math.max.apply(null, arr); // returns 89
 
 We had to use Math.max.apply(null, arr) because Math.max(arr) returns NaN. Math.max() expects comma-seperated arguments, but not an array. The spread operator makes this syntax much better to read and maintain.
@@ -325,7 +325,7 @@ Replace the two assignment with an with an equivalent destructuring assignment. 
 
     // change code below this line
 
-    const today} = HIGH_TEMPERATURES.today;
+    const today = HIGH_TEMPERATURES.today;
     const tomorrow = HIGH_TEMPERATURES.tomorrow;
 
     // change code above this line
@@ -386,3 +386,46 @@ Solution:
         };
 
     const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+
+## Use Destructuring Assignment to Assign Variables from Nested Objects
+
+You can use the same principles from the previous two lessons to destructure values from nested objects.
+
+Using an object similar to previous examples:
+
+    const user = {
+      johnDoe: {
+        age: 34,
+        email: 'johnDoe@freeCodeCamp.com'
+      }
+    };
+
+Here's how to extract the value of object properties and assign them to variables with the same name:
+
+    const { johnDoe: {age, email}} = user;
+
+and here's how you can assign an object properties' values to variables with different names:
+
+    const { johnDoe: { age: userAge, email: userEmail }} = user;
+
+Replace the two assignment with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values today.low and today.high from the LOCAL_FORECAST object.
+
+    const LOCAL_FORECAST = {
+      yesterday: { low: 61, high: 75 },
+      today: { low: 64, high: 77 },
+      tomorrow: { low: 68, high: 80 }
+    };
+
+    // change code below this line
+
+    const lowToday = LOCAL_FORECAST.today.low;
+    const highToday = LOCAL_FORECAST.today.high;
+
+    // change code above this line
+
+    console.log(lowToday); // should be 64
+    console.log(highToday); // should be 77
+
+Solution:
+
+    const {today: {low: lowToday, high: highToday}} = LOCAL_FORECAST
